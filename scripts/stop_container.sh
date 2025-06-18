@@ -1,5 +1,7 @@
-#!/bin/bash
-
-if [ /*docker ps check some value */ ]; then
-   docker stop wasimakram0028/django-web && docker rm -f wasimakram0028/django-web
-fi
+#!/bin/sh
+ids=$(docker ps -a -q)
+for id in $ids
+do
+  echo "$id"
+  docker stop $id && docker rm $id
+done
