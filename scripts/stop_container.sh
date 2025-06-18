@@ -1,6 +1,5 @@
 #!/bin/bash
-set -e
 
-# Stop the running container (if any)
-containerid=`docker ps | awk -F " " '{print $1}'`
-docker rm -f $containerid
+if [ /*docker ps check some value */ ]; then
+   docker stop wasimakram0028/django-web && docker rm -f wasimakram0028/django-web
+fi
